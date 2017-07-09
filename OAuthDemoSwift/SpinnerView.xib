@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SpinnerView" customModule="OAuthDemoSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GAv-sj-I5O">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, wait..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2p-dC-6pM">
+                    <rect key="frame" x="135" y="374" width="105" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.89763484589041098" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GAv-sj-I5O" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8sL-sy-vuI"/>
+                <constraint firstItem="S2p-dC-6pM" firstAttribute="centerX" secondItem="GAv-sj-I5O" secondAttribute="centerX" id="CRq-EW-GDC"/>
+                <constraint firstItem="GAv-sj-I5O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DOW-y7-dya"/>
+                <constraint firstItem="S2p-dC-6pM" firstAttribute="top" secondItem="GAv-sj-I5O" secondAttribute="bottom" constant="22" id="Fzx-uV-GmW"/>
+                <constraint firstItem="S2p-dC-6pM" firstAttribute="width" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:2" id="uxo-id-BsT"/>
+            </constraints>
+            <connections>
+                <outlet property="messageLabel" destination="S2p-dC-6pM" id="y96-8V-sn9"/>
+                <outlet property="spinner" destination="GAv-sj-I5O" id="quK-Pg-FUy"/>
+            </connections>
+        </view>
+    </objects>
+</document>

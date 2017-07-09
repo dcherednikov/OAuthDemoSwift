@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="ML2-57-XKY" customClass="WebVC" customModule="OAuthDemoSwift" customModuleProvider="target">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="MNE-RX-f1S"/>
+                <viewControllerLayoutGuide type="bottom" id="xpM-Uw-d0P"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="hHD-7K-NMx">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-bK-DBb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </webView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="pAv-bK-DBb" firstAttribute="leading" secondItem="hHD-7K-NMx" secondAttribute="leading" id="LXh-WD-dfz"/>
+                    <constraint firstAttribute="bottom" secondItem="pAv-bK-DBb" secondAttribute="bottom" id="RgC-bo-nXu"/>
+                    <constraint firstAttribute="trailing" secondItem="pAv-bK-DBb" secondAttribute="trailing" id="RiS-E4-LgQ"/>
+                    <constraint firstItem="pAv-bK-DBb" firstAttribute="top" secondItem="hHD-7K-NMx" secondAttribute="top" id="Tq3-41-sr8"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="webView" destination="pAv-bK-DBb" id="j55-Ay-5Eb"/>
+            </connections>
+            <point key="canvasLocation" x="20" y="-74"/>
+        </viewController>
+    </objects>
+</document>
